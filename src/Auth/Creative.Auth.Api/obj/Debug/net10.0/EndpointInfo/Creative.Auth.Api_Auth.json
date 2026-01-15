@@ -1,0 +1,309 @@
+{
+  "x-generator": "NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Creative Auth API",
+    "version": "v1"
+  },
+  "paths": {
+    "/auth/verify-email": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmail",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/auth/reset-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthResetPasswordResetPassword",
+        "requestBody": {
+          "x-name": "ResetPasswordRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthResetPasswordResetPasswordRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthRegisterRegister",
+        "requestBody": {
+          "x-name": "RegisterRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApplicationFeaturesRegisterRegisterRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/auth/refresh-token": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthRefreshTokenRefreshToken",
+        "requestBody": {
+          "x-name": "RefreshTokenRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthRefreshTokenRefreshTokenRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreativeAuthApplicationFeaturesLoginAuthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthLogoutLogout",
+        "requestBody": {
+          "x-name": "LogoutRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthLogoutLogoutRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthLoginLogin",
+        "requestBody": {
+          "x-name": "LoginRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApplicationFeaturesLoginLoginRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreativeAuthApplicationFeaturesLoginAuthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/forgot-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "CreativeAuthApiEndpointsAuthForgotPasswordForgotPassword",
+        "requestBody": {
+          "x-name": "ForgotPasswordRequest",
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthForgotPasswordForgotPasswordRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthForgotPasswordForgotPasswordResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreativeAuthApiEndpointsAuthResetPasswordResetPasswordRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Token": {
+            "type": "string"
+          },
+          "NewPassword": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApplicationFeaturesRegisterRegisterRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Email": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          },
+          "FirstName": {
+            "type": "string"
+          },
+          "LastName": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApplicationFeaturesLoginAuthResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Token": {
+            "type": "string"
+          },
+          "RefreshToken": {
+            "type": "string"
+          },
+          "RefreshTokenExpiration": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Email": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthRefreshTokenRefreshTokenRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Token": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthLogoutLogoutRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "RefreshToken": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApplicationFeaturesLoginLoginRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Email": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthForgotPasswordForgotPasswordResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Message": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthForgotPasswordForgotPasswordRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Email": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWTBearerAuth": {
+        "type": "http",
+        "description": "Enter a JWT token to authorize the requests...",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <UserSecretsId>cf4bbc17-9f0d-43fa-991f-de46130542cc</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastEndpoints" Version="7.2.0" />
+    <PackageReference Include="FastEndpoints.Swagger" Version="7.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Auth\Creative.Auth.Application\Creative.Auth.Application.csproj" />
+    <ProjectReference Include="..\..\Auth\Creative.Auth.Api\Creative.Auth.Api.csproj" />
+  </ItemGroup>
+
+</Project>

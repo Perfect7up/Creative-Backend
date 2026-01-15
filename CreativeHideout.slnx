@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Auth/">
+    <Project Path="src/Auth/Creative.Auth.Api/Creative.Auth.Api.csproj" />
+    <Project Path="src/Auth/Creative.Auth.Application/Creative.Auth.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/Gateway/">
+    <Project Path="src/Gateway/Creative.Gateway.Api/Creative.Gateway.Api.csproj" />
+  </Folder>
+</Solution>
