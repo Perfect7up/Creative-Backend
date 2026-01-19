@@ -8,7 +8,7 @@ public class VerifyEmail(IAuthDbContext db) : EndpointWithoutRequest
 {
     public override void Configure()
     {
-        Get("auth/verify-email");
+        Get("/auth/verify-email");
         AllowAnonymous();
         Tags("Auth");
         Summary(s => s.Params["token"] = "The verification token");

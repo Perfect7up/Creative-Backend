@@ -10,3 +10,8 @@ D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Api\obj\Debug\net10.0\staticwebassets.build.json

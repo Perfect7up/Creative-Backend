@@ -11,7 +11,7 @@ public class ResetPassword(IAuthDbContext db) : Endpoint<ResetPasswordRequest>
 {
     public override void Configure()
     {
-        Post("auth/reset-password");
+        Post("/auth/reset-password");
         AllowAnonymous();
         Tags("Auth");
     }

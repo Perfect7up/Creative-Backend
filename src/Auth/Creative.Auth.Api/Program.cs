@@ -87,6 +87,16 @@ if (jwtSettings != null)
         };
     });
 }
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt")); 
 
 builder.Services.AddFastEndpoints(o =>
@@ -97,6 +107,7 @@ builder.Services.AddFastEndpoints(o =>
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+app.UseCors("AllowFrontend");
 
 if (app.Environment.IsDevelopment())
 {
@@ -107,5 +118,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseFastEndpoints();
+
+app.MapGet("/", () => Results.Redirect("/swagger"))
+   .ExcludeFromDescription();
 
 app.Run();

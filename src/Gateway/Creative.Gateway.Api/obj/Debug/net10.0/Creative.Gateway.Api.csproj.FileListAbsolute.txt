@@ -80,3 +80,4 @@ D:\Dev\personal\Creative-hideout\Creative_Backend\src\Gateway\Creative.Gateway.A
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Gateway\Creative.Gateway.Api\obj\Debug\net10.0\Creative.Gateway.Api.genruntimeconfig.cache
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Gateway\Creative.Gateway.Api\obj\Debug\net10.0\ref\Creative.Gateway.Api.dll
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Gateway\Creative.Gateway.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Gateway\Creative.Gateway.Api\obj\Debug\net10.0\Creative.Gateway.Api.sourcelink.json

@@ -17,7 +17,7 @@ public class Logout : Endpoint<LogoutRequest>
 
     public override void Configure()
     {
-        Post("auth/logout");
+        Post("/auth/logout");
         AllowAnonymous();
         Tags("Auth");
     }

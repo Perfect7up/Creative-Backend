@@ -27,12 +27,25 @@ if (jwtSettings != null)
             };
         });
 }
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // Your Vite Dev URL
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .WithExposedHeaders("X-Trace-Id"); // Allow the custom header we created
+    });
+});
+builder.Services.AddAuthModule(builder.Configuration);
 builder.Services.AddAuthorization();
 builder.Services.SwaggerDocument(o => {
     o.DocumentSettings = s => { s.Title = "Creative Gateway API"; s.Version = "v1"; };
 });
 
 var app = builder.Build();
+app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

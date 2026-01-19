@@ -2,14 +2,14 @@
   "x-generator": "NSwag v14.6.3.0 (NJsonSchema v11.5.2.0 (Newtonsoft.Json v13.0.0.0))",
   "openapi": "3.0.0",
   "info": {
-    "title": "Creative Full API",
+    "title": "Creative Auth API",
     "version": "v1"
   },
   "paths": {
-    "/api/auth/verify-email": {
+    "/auth/verify-email": {
       "get": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmail",
         "responses": {
@@ -19,10 +19,10 @@
         }
       }
     },
-    "/api/auth/reset-password": {
+    "/auth/reset-password": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthResetPasswordResetPassword",
         "requestBody": {
@@ -45,10 +45,10 @@
         }
       }
     },
-    "/api/auth/register": {
+    "/auth/register": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthRegisterRegister",
         "requestBody": {
@@ -71,10 +71,10 @@
         }
       }
     },
-    "/api/auth/refresh-token": {
+    "/auth/refresh-token": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthRefreshTokenRefreshToken",
         "requestBody": {
@@ -104,10 +104,10 @@
         }
       }
     },
-    "/api/auth/logout": {
+    "/auth/logout": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthLogoutLogout",
         "requestBody": {
@@ -130,10 +130,10 @@
         }
       }
     },
-    "/api/auth/login": {
+    "/auth/login": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthLoginLogin",
         "requestBody": {
@@ -163,10 +163,10 @@
         }
       }
     },
-    "/api/auth/forgot-password": {
+    "/auth/forgot-password": {
       "post": {
         "tags": [
-          "Api"
+          "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthForgotPasswordForgotPassword",
         "requestBody": {

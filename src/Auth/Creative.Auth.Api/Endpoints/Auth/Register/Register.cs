@@ -13,7 +13,7 @@ public class Register(IAuthDbContext db, IEmailSender emailSender)
 {
     public override void Configure()
     {
-        Post("auth/register");
+        Post("/auth/register");
         AllowAnonymous();
         Tags("Auth");
     }

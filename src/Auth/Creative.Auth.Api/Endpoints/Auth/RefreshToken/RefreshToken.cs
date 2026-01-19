@@ -21,7 +21,7 @@ public class RefreshToken : Endpoint<RefreshTokenRequest, AuthResponse>
 
     public override void Configure()
     {
-        Post("auth/refresh-token");
+        Post("/auth/refresh-token");
         AllowAnonymous();
         Tags("Auth");
     }

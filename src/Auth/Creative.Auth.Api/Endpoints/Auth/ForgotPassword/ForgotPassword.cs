@@ -24,7 +24,7 @@ public class ForgotPassword : Endpoint<ForgotPasswordRequest, ForgotPasswordResp
 
     public override void Configure()
     {
-        Post("auth/forgot-password");
+        Post("/auth/forgot-password");
         AllowAnonymous();
         Tags("Auth");
     }
