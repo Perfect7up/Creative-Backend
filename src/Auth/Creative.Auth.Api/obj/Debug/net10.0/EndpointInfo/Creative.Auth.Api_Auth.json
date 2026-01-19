@@ -12,9 +12,26 @@
           "Auth"
         ],
         "operationId": "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmail",
+        "parameters": [
+          {
+            "name": "Token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmailResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -57,7 +74,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreativeAuthApplicationFeaturesRegisterRegisterRequest"
+                "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthRegisterRegisterRequest"
               }
             }
           },
@@ -65,8 +82,15 @@
           "x-position": 1
         },
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreativeAuthApiEndpointsAuthRegisterRegisterResponse"
+                }
+              }
+            }
           }
         }
       }
@@ -199,6 +223,19 @@
   },
   "components": {
     "schemas": {
+      "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmailResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Message": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmailRequest": {
+        "type": "object",
+        "additionalProperties": false
+      },
       "CreativeAuthApiEndpointsAuthResetPasswordResetPasswordRequest": {
         "type": "object",
         "additionalProperties": false,
@@ -211,7 +248,16 @@
           }
         }
       },
-      "CreativeAuthApplicationFeaturesRegisterRegisterRequest": {
+      "CreativeAuthApiEndpointsAuthRegisterRegisterResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Message": {
+            "type": "string"
+          }
+        }
+      },
+      "CreativeAuthApiEndpointsAuthRegisterRegisterRequest": {
         "type": "object",
         "additionalProperties": false,
         "properties": {

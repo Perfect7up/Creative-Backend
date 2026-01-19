@@ -107,15 +107,17 @@
     "Parameters": [
       {
         "Name": "RegisterRequest",
-        "Type": "Creative.Auth.Application.Features.Register.RegisterRequest",
+        "Type": "Creative.Auth.Api.Endpoints.Auth.Register.RegisterRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 204
+        "Type": "Creative.Auth.Api.Endpoints.Auth.Register.RegisterResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
       }
     ],
     "EndpointName": "CreativeAuthApiEndpointsAuthRegisterRegister"
@@ -150,12 +152,20 @@
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "VerifyEmailRequest",
+        "Type": "Creative.Auth.Api.Endpoints.Auth.VerifyEmail.VerifyEmailRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 204
+        "Type": "Creative.Auth.Api.Endpoints.Auth.VerifyEmail.VerifyEmailResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
       }
     ],
     "EndpointName": "CreativeAuthApiEndpointsAuthVerifyEmailVerifyEmail"

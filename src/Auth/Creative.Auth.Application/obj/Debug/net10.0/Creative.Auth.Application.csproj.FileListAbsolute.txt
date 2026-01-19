@@ -10,3 +10,4 @@ D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Applica
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Application\obj\Debug\net10.0\refint\Creative.Auth.Application.dll
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Application\obj\Debug\net10.0\Creative.Auth.Application.pdb
 D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Application\obj\Debug\net10.0\ref\Creative.Auth.Application.dll
+D:\Dev\personal\Creative-hideout\Creative_Backend\src\Auth\Creative.Auth.Application\obj\Debug\net10.0\Creative.Auth.Application.sourcelink.json

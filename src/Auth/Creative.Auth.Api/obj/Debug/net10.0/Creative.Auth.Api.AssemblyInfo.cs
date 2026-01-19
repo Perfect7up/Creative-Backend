@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Creative.Auth.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd35828e7342078a86a6f3afc88ac8b461566414")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b609ab1aa3f7f34f362b07d962ce94ab60b3a9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Creative.Auth.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Creative.Auth.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

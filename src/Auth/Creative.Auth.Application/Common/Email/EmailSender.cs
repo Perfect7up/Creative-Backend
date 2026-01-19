@@ -9,6 +9,8 @@ namespace Creative.Auth.Application.Common.Email;
 public interface IEmailSender
 {
     Task SendEmailAsync(string to, string subject, string body);
+    string CreateVerificationLink(string token);
+    string CreateResetPasswordLink(string token);
 }
 
 public class EmailSender : IEmailSender
@@ -43,11 +45,11 @@ public class EmailSender : IEmailSender
 
     public string CreateVerificationLink(string token)
     {
-        return $"{_frontendUrl}/verify-email?token={token}";
+        return $"{_frontendUrl}/account/verify-email?token={token}";
     }
 
     public string CreateResetPasswordLink(string token)
     {
-        return $"{_frontendUrl}/reset-password?token={token}";
+        return $"{_frontendUrl}/account/reset-password?token={token}";
     }
 }

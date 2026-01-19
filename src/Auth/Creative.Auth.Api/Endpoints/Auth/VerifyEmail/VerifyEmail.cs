@@ -4,21 +4,29 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Creative.Auth.Api.Endpoints.Auth.VerifyEmail;
 
-public class VerifyEmail(IAuthDbContext db) : EndpointWithoutRequest
+public class VerifyEmailRequest
+{
+    [QueryParam]
+    public string Token { get; set; } = default!;
+}
+
+public class VerifyEmailResponse
+{
+    public string Message { get; set; } = default!;
+}
+
+public class VerifyEmail(IAuthDbContext db) : Endpoint<VerifyEmailRequest, VerifyEmailResponse>
 {
     public override void Configure()
     {
         Get("/auth/verify-email");
         AllowAnonymous();
         Tags("Auth");
-        Summary(s => s.Params["token"] = "The verification token");
     }
 
-    public override async Task HandleAsync(CancellationToken ct)
+    public override async Task HandleAsync(VerifyEmailRequest req, CancellationToken ct)
     {
-        var token = Query<string>("token");
-
-        var user = await db.Users.FirstOrDefaultAsync(u => u.VerificationToken == token, ct);
+        var user = await db.Users.FirstOrDefaultAsync(u => u.VerificationToken == req.Token, ct);
 
         if (user == null)
             ThrowError("Invalid token", 400);
@@ -29,6 +37,9 @@ public class VerifyEmail(IAuthDbContext db) : EndpointWithoutRequest
 
         await db.SaveChangesAsync(ct);
 
-        Response = new { Message = "Email verified successfully" };
+        Response = new VerifyEmailResponse
+        {
+            Message = "Email verified successfully"
+        };
     }
 }
