@@ -30,15 +30,14 @@ public class Login : Endpoint<LoginRequest, AuthResponse>
     {
         var user = await _db.Users.FirstOrDefaultAsync(u => u.Email == req.Email, ct);
 
-        if (user == null || !BC.Verify(req.Password, user.PasswordHash))
-        {
-            ThrowError("Invalid credentials", 401);
-        }
+        if (user == null)
+            ThrowError("No account found with this email. Please sign up first.", 401);
 
         if (!user.IsEmailVerified)
-        {
-            ThrowError("Please verify your email first", 403);
-        }
+            ThrowError("Your email is not verified. Please check your inbox for the confirmation link.", 403);
+
+        if (!BC.Verify(req.Password, user.PasswordHash))
+            ThrowError("The password you entered is incorrect.", 401);
 
         var jwt = _tokenGenerator.GenerateJwtToken(user);
         var refresh = _tokenGenerator.GenerateRefreshToken();

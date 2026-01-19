@@ -34,7 +34,9 @@ public class Register(IAuthDbContext db, IEmailSender emailSender)
     {
         // 1. Check if user exists
         if (await db.Users.AnyAsync(u => u.Email == req.Email, ct))
-            ThrowError("Email already registered", 400);
+        {
+            ThrowError("This email address is already in use. Try logging in instead.", 400);
+        }
 
         // 2. Create the User object
         var verificationToken = Guid.NewGuid().ToString();
